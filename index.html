@@ -56,18 +56,35 @@
 
     <!-- Hlavní obsah -->
      <main>
+        <!-- Hero banner sekce -->
+        <section class="hero-banner">
+            <div class="data-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Tereza Nehézová</h1>
+                    <div class="subtitle">
+                        <span>Data</span>
+                        <span class="separator">|</span>
+                        <span>Marketing</span>
+                        <span class="separator">|</span>
+                        <span>Operační výzkum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Sekce "O Mě" -->
         <section id="about" class="section">
             <div class="container">
-                <h1>Tereza Nehézová</h1>
-                <div class="subtitle">Datová analytička | Marketingový výzkum | Operační výzkum</div>
+                <!--<h1>Tereza Nehézová</h1>
+                <div class="subtitle">Data | Marketing | Operační výzkum</div>-->
                 
                 <div class="about-content">
                     <div class="about-text">
                         <h2>O mně</h2>
+                    
                         <p>Krátký odstavec o vás, vašich zkušenostech a zaměření. Co vás motivuje, jaké máte cíle a čím se odlišujete.</p>
-                        
+
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
@@ -82,9 +99,9 @@
                     </div>
                     
                     <div class="about-image">
-                        <!-- Místo pro profilovou fotku -->
                         <img src="images/foto_uis.jpg" alt="Tereza Nehézová">
                     </div>
+
                 </div>
             </div>
         </section>
@@ -118,6 +135,15 @@
                         <h3>Operační výzkum</h3>
                         <p>Popis vašich zkušeností a služeb v oblasti operačního výzkumu.</p>
                     </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Operační výzkum</h3>
+                        <p>Popis vašich zkušeností a služeb v oblasti operačního výzkumu.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -126,7 +152,7 @@
          <section id="cv" class="section">
             <div class="container">
                 <h2>Curriculum Vitae</h2>
-                
+
                 <div class="cv-content">
                     <!-- Vzdělání -->
                     <div class="cv-section">
@@ -158,15 +184,15 @@
                     
                     <!-- Dovednosti -->
                     <div class="cv-section">
-                        <h3>Dovednosti</h3>
+                        <h3>Co umím?</h3>
                         <div class="skills-grid">
                             <div class="skill-category">
                                 <h4>Datová analýza</h4>
                                 <ul>
-                                    <li>Python</li>
-                                    <li>R</li>
                                     <li>SQL</li>
-                                    <li>Tableau</li>
+                                    <li>Python</li>
+                                    <li>Google Analytics 4 / BigQuery</li>
+                                    <li>Power BI / Looker Studio</li>
                                 </ul>
                             </div>
                             
@@ -192,8 +218,14 @@
                 </div>
                 
                 <div class="cv-download">
-                    <a href="assets/cv.pdf" class="btn" download>Stáhnout CV v PDF</a>
+                    <a href="files/" class="btn" download>Stáhnout CV v PDF</a>
                 </div>
+
+                <div class="cv-download">
+                    <link rel="stylesheet" href="">
+                    <button class="btn"><i class="fa fa-download">Stáhnout CV</i> </button>
+                </div>
+
             </div>
         </section>
 
