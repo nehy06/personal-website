@@ -26,6 +26,7 @@
 
 </head>
 <body>
+
     <!-- Header / Navigace -->
     <header id="header">
         <div class="container">
@@ -63,7 +64,22 @@
                 <div class = "hero-content">
                     <h1 class="hero-heading">Lorem ipsum dolor sit.</h1>
                     <p class="hero-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, dicta!</p>
-                    <a href="KOTVA NA KONTAKT" class="hero-btn">KOTVA NA KONTAKT<span class="icon">→</span></a>
+                    
+                    <!--Social link přímo do banneru-->
+                    <!-- než je dodělám, tak jsou vypnuté
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/nehy06" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://orcid.org/0000-0002-7695-6194" target="_blank" aria-label="ORCID">
+                            <i class="fab fa-orcid"></i>
+                        </a>
+                    </div>-->
+
+                    <a href="#contact" class="hero-btn">KOTVA NA KONTAKT<span class="icon">→</span></a>
                 </div>
                 <div class="hero-image">
                     <img src="images/hero.png" alt="">
@@ -81,7 +97,7 @@
                     <div class="about-text">
                         <h2>O mně</h2>
                     
-                        <p>Krátký odstavec o vás, vašich zkušenostech a zaměření. Co vás motivuje, jaké máte cíle a čím se odlišujete.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio quae sapiente saepe molestias aliquam perferendis debitis, accusantium aliquid quia nam.</p>
 
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank" aria-label="LinkedIn">
@@ -95,10 +111,11 @@
                             </a>
                         </div>
                     </div>
-                    
+
+                    <!-- Image v sekci about me, ale ještě s ním nejsem spoko, tak je vypnutý
                     <div class="about-image">
                         <img src="images/foto_uis.jpg" alt="Tereza Nehézová">
-                    </div>
+                    </div>-->
 
                 </div>
             </div>
@@ -115,7 +132,7 @@
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h3>Datová analytika</h3>
-                        <p>Popis vašich zkušeností a služeb v oblasti datové analytiky.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sit aspernatur dolorum!</p>
                     </div>
                     
                     <div class="service-card">
@@ -123,7 +140,7 @@
                             <i class="fas fa-bullseye"></i>
                         </div>
                         <h3>Marketingový výzkum</h3>
-                        <p>Popis vašich zkušeností a služeb v oblasti marketingového výzkumu.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, alias. Non, distinctio!</p>
                     </div>
 
                     <div class="neo-card">
@@ -149,71 +166,78 @@
          <!-- Sekce CV -->
          <section id="cv" class="section">
             <div class="container">
-                <h2>Curriculum Vitae</h2>
-
+                <h2>CV</h2>
+                
                 <div class="cv-content">
-                    <!-- Vzdělání -->
-                    <div class="cv-section">
-                        <h3>Vzdělání</h3>
-                        <div class="cv-item">
-                            <div class="cv-date">20XX - 20XX</div>
-                            <div class="cv-details">
-                                <h4>Název studia / titul</h4>
-                                <div class="cv-place">Název univerzity</div>
-                                <p>Krátký popis zaměření studia.</p>
+                    <div class="cv-grid">
+        
+                        <!-- Vzdělání sloupeček-->
+                        <div class="cv-column" id="education">
+                            <h3 class="cv-section-title">Vzdělání</h3>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2019-2025</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
                             </div>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2017-2019</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
+                            </div>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <!-- Další položky vzdělání -->
-                    </div>
-                    
-                    <!-- Pracovní zkušenosti -->
-                    <div class="cv-section">
-                        <h3>Pracovní zkušenosti</h3>
-                        <div class="cv-item">
-                            <div class="cv-date">20XX - současnost</div>
-                            <div class="cv-details">
-                                <h4>Pozice</h4>
-                                <div class="cv-place">Název společnosti</div>
-                                <p>Popis vaší role a klíčových úspěchů.</p>
+
+                        <!-- Pracovní zkušenosti-->
+                        <div class="cv-column" id="education">
+                            <h3 class="cv-section-title">Pracovní zkušenosti</h3>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2019-2025</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Další položky pracovních zkušeností -->
-                    </div>
-                    
-                    <!-- Dovednosti -->
-                    <div class="cv-section">
-                        <h3>Co umím?</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Datová analýza</h4>
-                                <ul>
-                                    <li>SQL</li>
-                                    <li>Python</li>
-                                    <li>Google Analytics 4 / BigQuery</li>
-                                    <li>Power BI / Looker Studio</li>
-                                </ul>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h4>Statistické metody</h4>
-                                <ul>
-                                    <li>Regresní analýza</li>
-                                    <li>Časové řady</li>
-                                    <li>Klasifikační algoritmy</li>
-                                </ul>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-details">
+                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h4>Ostatní</h4>
-                                <ul>
-                                    <li>Project management</li>
-                                    <li>Týmová spolupráce</li>
-                                    <li>Prezentační dovednosti</li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
-                </div>
+                 </div>
                 
                 <div class="cv-download">
                     <a href="files/" class="hero-btn" download>Stáhnout CV v PDF</a>
