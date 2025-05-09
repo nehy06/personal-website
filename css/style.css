@@ -14,7 +14,7 @@ Version: 1.1
     --light-color: #f4f4f4;
     --dark-color: #222;
     --max-width: 1200px;
-    --font-main: 'Roboto Mono', sans-serif;
+    --font-main: 'Roboto', sans-serif;
     --font-mono: 'Roboto Mono', monospace;
 }
 
@@ -55,6 +55,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    font-family: var(--font-mono);
 }
 
 h2 {
@@ -62,6 +63,7 @@ h2 {
     margin-bottom: 2rem;
     position: relative;
     text-align: center;
+    font-family: var(--font-mono);
 }
 
 h2:after {
@@ -73,6 +75,7 @@ h2:after {
     margin-top: 15px;
     margin-left: auto; /* These two margin properties */
     margin-right: auto; /* center the line under the text */
+    font-family: var(--font-mono);
 }
 
 h3 {
@@ -289,14 +292,13 @@ img {
     display: flex;
     align-items: center;
     padding: 4rem 2rem;
-    background-color: white;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .hero-content{
     flex: 1;
     max-width: 600;
-
 }
 
 .hero-text{
@@ -618,3 +620,8 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     margin-top: 3rem;
     text-align: center;
 }
+
+  /* Footer */
+  /*---------------------------------------*/
+
+  
