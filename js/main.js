@@ -1,28 +1,37 @@
 // Aktualizace roku v patičce
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
-// Plynulé scrollování na kotvy
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70, // Kompenzace pro fixní header
-                behavior: 'smooth'
-            });
+// Check if we're on the homepage
+const isHomepage = document.body.classList.contains('home');
+
+// Plynulé scrollování na kotvy (pouze na domovské stránce)
+if (isHomepage) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
             
-            // Zavře mobilní menu při kliknutí na odkaz
-            if (hamburger && hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
+            // Skip if not a hash link
+            if (targetId === '#' || !targetId.startsWith('#')) return;
+            
+            e.preventDefault();
+            
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, // Kompenzace pro fixní header
+                    behavior: 'smooth'
+                });
+                
+                // Zavře mobilní menu při kliknutí na odkaz
+                if (hamburger && hamburger.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
             }
-        }
+        });
     });
-});
+}
 
 // Mobilní navigace
 const hamburger = document.querySelector('.hamburger');
@@ -43,7 +52,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Sticky navigace (volitelné)
+// Sticky navigace
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
@@ -52,3 +61,14 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('sticky');
     }
 });
+
+// Zvýraznění aktuální položky menu na ostatních stránkách
+if (!isHomepage) {
+    const currentUrl = window.location.href;
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        if (link.href === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+}
