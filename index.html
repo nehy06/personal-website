@@ -28,16 +28,14 @@
 <body>
 
     <!-- Header / Navigace -->
-    <header id="header">
+    <!--<header id="header">
         <div class="container">
             <nav class="navbar">
                 
-                <!-- Logo -->
                 <div class="logo">
                     <a href="#"><img src="images/bar-graph.png" alt="logo"></a>
                 </div>
                  
-                <!-- Linky v navigaci -->
                 <ul class="nav-links">
                     <li><a href="#about">O mně</a></li>
                     <li><a href="#services">Služby</a></li>
@@ -54,7 +52,9 @@
                 
             </nav>
         </div>
-    </header>
+    </header> -->
+
+<?php get_header(); ?>
 
     <!-- Hlavní obsah -->
      <main>
@@ -65,25 +65,10 @@
                 <div class = "hero-content">
                     <h1 class="hero-heading">Lorem ipsum dolor sit.</h1>
                     <p class="hero-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, dicta!</p>
-                    
-                    <!--Social link přímo do banneru-->
-                    <!-- než je dodělám, tak jsou vypnuté
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/nehy06" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://orcid.org/0000-0002-7695-6194" target="_blank" aria-label="ORCID">
-                            <i class="fab fa-orcid"></i>
-                        </a>
-                    </div>-->
-
                     <a href="#contact" class="hero-btn">KOTVA NA KONTAKT<span class="icon">→</span></a>
                 </div>
                 <div class="hero-image">
-                    <img src="images/hero.png" alt="">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.png" alt="">
                 </div>
             </div>
         </section>
@@ -310,11 +295,7 @@
 
      </main>
 
-    <!-- Footer -->
-    <footer id="footer">
         <?php get_footer(); ?>
-    </footer>
-
 
      <!-- JavaScript -->
     <script src="js/main.js"></script>
