@@ -1,12 +1,13 @@
 <?php
 /**
- * The template for displaying the footer
+ * Šablona pro zobrazení šablony
  *
- * Contains the closing of the #content div and all content after.
+ * .
  */
 ?>
 
-</main><!-- #main -->
+<!-- #main -->
+</main>
 
 <footer id="footer">
     <div class="container">
