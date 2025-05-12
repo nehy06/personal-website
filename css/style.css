@@ -474,9 +474,9 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffff; /* Darker background for icon */
+    /*background: #ffff; /* Darker background for icon */
     border-radius: 50%;
-    border:#222 1px solid ;
+    /* border:#222 1px solid ;*/
     margin-bottom: 1.5rem;
 }
 
