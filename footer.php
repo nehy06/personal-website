@@ -1,6 +1,6 @@
 <?php
 /**
- * Šablona pro zobrazení šablony
+ * Šablona pro zobrazení patičky
  *
  * .
  */

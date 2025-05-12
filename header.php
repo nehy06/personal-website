@@ -24,7 +24,7 @@
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bar-graph.png" alt="logo">
                 </a>
             </div>
-             
+            
             <!-- Navigation Links -->
             <?php if (is_front_page()) : ?>
                 <!-- Single page navigation for homepage -->
