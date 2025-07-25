@@ -21,17 +21,19 @@ Toto je repozitář mých osobních webových stránek, které slouží jako por
 - Blogová sekce pro sdílení poznatků a článků
 
 ## Struktura
-├── index.html           # Hlavní stránka
-├── css/                 # CSS styly
-│   └── style.css        # Hlavní stylesheet
-├── js/                  # JavaScript
-│   └── main.js          # Hlavní JavaScript soubor
-├── images/              # Obrázky a média
-└── page-construction.php # WordPress šablona pro stránku "Ve výstavbě"
+├── index.html              # Hlavní stránka (single-page app)
+├── ve-vystavbe.html        # Dočasná stránka "ve výstavbě"
+├── css/
+│   └── style.css           # Hlavní stylesheet
+├── js/
+│   ├── main.js            # Hlavní JavaScript (navigace, animace)
+│   └── modal.js           # JavaScript pro modal okna
+├── images/                 # Obrázky a média
+└── README.md              # Dokumentace projektu
 
-## WordPress integrace
-
-Projekt je navržen pro implementaci do WordPress CMS jako vlastní téma. Soubory jako `functions.php`, `header.php` a `page-construction.php` slouží jako základní komponenty pro WordPress téma.
+## Plánované funkce
+- [ ] Portfolio sekce s projekty
+- [ ] Kontaktní formulář
 
 ## Kontakt
 
