@@ -28,7 +28,7 @@
 <body>
 
     <!-- Header / Navigace -->
-    <!--<header id="header">
+    <header id="header">
         <div class="container">
             <nav class="navbar">
                 
@@ -37,8 +37,8 @@
                 </div>
                  
                 <ul class="nav-links">
-                    <li><a href="#about">O mně</a></li>
-                    <li><a href="#services">Služby</a></li>
+                    <li><a href="#hero">O mně</a></li>
+                    <li><a href="#services">Co dělám</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Kontakt</a></li>
@@ -52,40 +52,44 @@
                 
             </nav>
         </div>
-    </header> -->
-
-<?php get_header(); ?>
+    </header>
 
     <!-- Hlavní obsah -->
-     <main>
+    <main>
 
-        <!-- Hero banner sekce -->
-        <section id="hero" class="section">
+        <!-- stará Hero banner sekce -->
+        <!--<section id="hero" class="section">
             <div class="hero-banner">
                 <div class = "hero-content">
                     <h1 class="hero-heading">Lorem ipsum dolor sit.</h1>
-                    <p class="hero-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, dicta!</p>
-                    <a href="#contact" class="hero-btn">KOTVA NA KONTAKT<span class="icon">→</span></a>
+                    <p class="hero-text">Lorem ipsum dolor | sit amet consectetur adipisicing elit | Accusantium, dicta!</p>
+                    <a href="#contact" class="hero-btn">Napište mi<span class="icon">→</span></a>
                 </div>
                 <div class="hero-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.png" alt="">
+                    <img src="images/hero.png" alt="hero banner picture">
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <!-- Sekce "O Mě" -->
-        <section id="about" class="section">
+        <!-- Hero banner sekce -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-background">
+                <img src="images/banner.jpg" alt="Background" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+
             <div class="container">
-                <!--<h1>Tereza Nehézová</h1>
-                <div class="subtitle">Data | Marketing | Operační výzkum</div>-->
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>O mně</h2>
-                    
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio quae sapiente saepe molestias aliquam perferendis debitis, accusantium aliquid quia nam.</p>
+                <div class="hero-content-center">
+                    <h1 class="hero-name">Tereza<br>Sedlářová Nehézová</h1>
+                    <div class="hero-tagline">
+                        <p class="hero-intro"> 📊Ahoj! Specializuji se na datovou analytiku, marketingový výzkum a operační výzkum. Pomáhám vám analyzovat a vizualizovat vaše data.</p>
+                    </div>
+                    <div class="hero-description">
+                        <p>Data | Marketing <br>
+                        Měním čísla v příběhy a rozhodnutí</p>
+                    </div>
 
-                        <div class="social-links">
+                    <div class="social-links">
                             <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
@@ -95,40 +99,41 @@
                             <a href="https://orcid.org/0000-0002-7695-6194" target="_blank" aria-label="ORCID">
                                 <i class="fab fa-orcid"></i>
                             </a>
+                            <a href="https://www.researchgate.net/profile/Tereza-Sedlarova-Nehezova" target="_blank" aria-label="researchgate">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
                         </div>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="hero-btn primary">Napište mi</a>
+                        <a href="#portfolio" class="hero-btn secondary">Moje práce</a>
                     </div>
-
-                    <!-- Image v sekci about me, ale ještě s ním nejsem spoko, tak je vypnutý
-                    <div class="about-image">
-                        <img src="images/foto_uis.jpg" alt="Tereza Nehézová">
-                    </div>-->
-
                 </div>
             </div>
         </section>
 
         <!-- Sekce Služby / Co dělám -->
-        <section id="services" class="section">
+        <!--<section id="services" class="section">
             <div class="container">
                 <h2>Co dělám</h2>
                 
+                
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="neo-card">
                         <div class="service-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
-                        <h3>Datová analytika</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sit aspernatur dolorum!</p>
+                        <h3>Neumorph card</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quis.</p>
                     </div>
-                    
-                    <div class="service-card">
+
+                    <div class="neo-card">
                         <div class="service-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>Marketingový výzkum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, alias. Non, distinctio!</p>
+                        <h3>Neumorph card</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quis.</p>
                     </div>
-
                     <div class="neo-card">
                         <div class="service-icon">
                             <i class="fas fa-project-diagram"></i>
@@ -139,7 +144,7 @@
 
                     <div class="neo-card">
                         <div class="service-icon">
-                            <i class="fas fa-project-diagram"></i>
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
                         </div>
                         <h3>Neumorph card</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quis.</p>
@@ -147,10 +152,191 @@
 
                 </div>
             </div>
+        </section>-->
+
+        <!-- Nová sekce Služby - s modal systémem -->
+        <section id="services-new" class="section">
+            <div class="container">
+                <h2>Co dělám - nový design</h2>
+                
+                <div class="services-new-grid">
+                    
+                    <div class="service-new-card">
+                        <div class="service-new-number">01</div>
+                        <div class="service-new-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Datová analytika</h3>
+                        <p>Transformuji vaše data v actionable insights. Analyzuji trendy, vytvářím dashboardy a pomáhám s data-driven rozhodováním.</p>
+                        <div class="service-new-link" data-modal="modal-analytics">
+                            <span>Více informací →</span>
+                        </div>
+                    </div>
+
+                    <div class="service-new-card">
+                        <div class="service-new-number">02</div>
+                        <div class="service-new-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Marketingový výzkum</h3>
+                        <p>Provádím kvalitativní i kvantitativní výzkumy, analyzuji zákazníky a trh. Pomáhám s optimalizací marketingových strategií.</p>
+                        <div class="service-new-link" data-modal="modal-marketing">
+                            <span>Více informací →</span>
+                        </div>
+                    </div>
+
+                    <div class="service-new-card">
+                        <div class="service-new-number">03</div>
+                        <div class="service-new-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Operační výzkum</h3>
+                        <p>Optimalizuji procesy pomocí matematických modelů. Řeším logistické problémy a zvyšuji efektivitu vašich operací.</p>
+                        <div class="service-new-link" data-modal="modal-operations">
+                            <span>Více informací →</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
-         <!-- Sekce CV -->
-         <section id="cv" class="section">
+        <!-- Modal pozadí -->
+        <div id="modal-overlay" class="modal-overlay">
+            
+            <!-- Modal 1: Datová analytika -->
+            <div id="modal-analytics" class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>Datová analytika</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-intro">
+                        <p>Specializuji se na transformaci vašich dat v cenné poznatky, které vám pomohou dělat informovaná rozhodnutí.</p>
+                    </div>
+                    
+                    <div class="modal-services">
+                        <h3>Co nabízím:</h3>
+                        <ul>
+                            <li><strong>Analýza dat</strong> - Explorativní analýza, statistické vyhodnocení</li>
+                            <li><strong>Dashboardy</strong> - Interaktivní vizualizace v Power BI, Tableau</li>
+                            <li><strong>Prediktivní modely</strong> - Machine learning, forecasting</li>
+                            <li><strong>KPI reporting</strong> - Automatizované reporty, metriky</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-tools">
+                        <h3>Nástroje:</h3>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">R</span>
+                            <span class="tool-tag">SQL</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Tableau</span>
+                            <span class="tool-tag">Excel</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-cta">
+                        <a href="#contact" class="modal-btn">Pojďme to probrat</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 2: Marketingový výzkum -->
+            <div id="modal-marketing" class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>Marketingový výzkum</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-intro">
+                        <p>Pomáhám firmám lépe porozumět svým zákazníkům a trhu prostřednictvím kvalitních výzkumů.</p>
+                    </div>
+                    
+                    <div class="modal-services">
+                        <h3>Typy výzkumů:</h3>
+                        <ul>
+                            <li><strong>Kvantitativní výzkum</strong> - Dotazníky, statistické analýzy</li>
+                            <li><strong>Kvalitativní výzkum</strong> - Rozhovory, focus groups</li>
+                            <li><strong>Analýza trhu</strong> - Konkurenční analýza, positioning</li>
+                            <li><strong>Customer insights</strong> - Segmentace, buyer personas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-process">
+                        <h3>Můj proces:</h3>
+                        <div class="process-steps">
+                            <div class="step">1. Definice cílů</div>
+                            <div class="step">2. Design výzkumu</div>
+                            <div class="step">3. Sběr dat</div>
+                            <div class="step">4. Analýza & insights</div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-cta">
+                        <a href="#contact" class="modal-btn">Začněme výzkum</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal 3: Operační výzkum -->
+            <div id="modal-operations" class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h2>Operační výzkum</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-intro">
+                        <p>Využívám matematické modelování k optimalizaci vašich procesů a zvýšení efektivity operací.</p>
+                    </div>
+                    
+                    <div class="modal-services">
+                        <h3>Oblasti specializace:</h3>
+                        <ul>
+                            <li><strong>Logistická optimalizace</strong> - Routing, scheduling, skladování</li>
+                            <li><strong>Resource planning</strong> - Alokace zdrojů, kapacitní plánování</li>
+                            <li><strong>Process improvement</strong> - Lean, Six Sigma metodiky</li>
+                            <li><strong>Decision support</strong> - Multi-criteria analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-benefits">
+                        <h3>Výsledky:</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit">
+                                <strong>Snížení nákladů</strong>
+                                <span>o 15-30%</span>
+                            </div>
+                            <div class="benefit">
+                                <strong>Zvýšení efektivity</strong>
+                                <span>o 20-40%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-cta">
+                        <a href="#contact" class="modal-btn">Optimalizujme procesy</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Sekce CV -->
+        <section id="cv" class="section">
             <div class="container">
                 <h2>CV</h2>
                 
@@ -159,31 +345,40 @@
         
                         <!-- Vzdělání sloupeček-->
                         <div class="cv-column" id="education">
-                            <h3 class="cv-section-title">Vzdělání</h3>
+                            <h3 class="cv-section-title">Pracovní zkušenosti</h3>
 
                             <div class="cv-item">
-                                <div class="cv-date">2019-2025</div>
+                                <div class="cv-date">2022-dosud</div>
                                 <div class="cv-details">
-                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <h4>Marketing Analyst</h4>
                                     <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
                                 </div>
                             </div>
 
                             <div class="cv-item">
-                                <div class="cv-date">2017-2019</div>
+                                <div class="cv-date">2020-2022</div>
                                 <div class="cv-details">
-                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <h4>Social Media Analyst</h4>
                                     <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
                                 </div>
                             </div>
 
                             <div class="cv-item">
-                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-date">2018-2019</div>
                                 <div class="cv-details">
-                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
-                                    <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
+                                    <h4>Project and Program support</h4>
+                                    <div class="cv-place"> ČSOB</div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                </div>
+                            </div>
+
+                            <div class="cv-item">
+                                <div class="cv-date">2014-2016</div>
+                                <div class="cv-details">
+                                    <h4>Sales Assistant</h4>
+                                    <div class="cv-place"> Mironet.cz a. s.</div>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
                                 </div>
                             </div>
@@ -192,32 +387,32 @@
 
                         <!-- Pracovní zkušenosti-->
                         <div class="cv-column" id="education">
-                            <h3 class="cv-section-title">Pracovní zkušenosti</h3>
+                            <h3 class="cv-section-title">Vzdělání</h3>
 
                             <div class="cv-item">
                                 <div class="cv-date">2019-2025</div>
                                 <div class="cv-details">
                                     <h4>Ph.D. Systémové inženýrství a informatika</h4>
                                     <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                    <p>Optimalizace s neurčitými daty v prostředí marketingu</p>
                                 </div>
                             </div>
 
                             <div class="cv-item">
-                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-date">2017-2029</div>
                                 <div class="cv-details">
-                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <h4>Ing. Systémové inženýrství</h4>
                                     <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                    <p>Efektivní plánování tras v kamionové dopravě pomocí robustní optimalizace a TSP</p>
                                 </div>
                             </div>
 
                             <div class="cv-item">
-                                <div class="cv-date">2017-20219</div>
+                                <div class="cv-date">2014-2017</div>
                                 <div class="cv-details">
-                                    <h4>Ph.D. Systémové inženýrství a informatika</h4>
+                                    <h4>Bc. Provoz a ekonomika (Ekonomika a management)</h4>
                                     <div class="cv-place"> Česká zemědělská univezrita v Praze<br>Provozně ekonomická fakulta</div>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, debitis!</p>
+                                    <p>Logistické modely v zemědělském podniku</p>
                                 </div>
                             </div>
 
@@ -226,19 +421,19 @@
                  </div>
                 
                 <div class="cv-download">
-                    <a href="files/" class="hero-btn" download>Stáhnout CV v PDF</a>
+                    <a href="files/" class="cv-btn" download>Stáhnout CV v PDF</a>
                 </div>
             </div>
         </section>
 
-         <!-- Sekce Portfolio -->
-         <section id="portfolio" class="section">
+        <!-- Sekce Portfolio -->
+        <section id="portfolio" class="section">
             <div class="container">
                 <h2>Portfolio</h2>
                 <p class="section-description">Tato sekce je momentálně ve výstavbě. Brzy zde najdete ukázky mých projektů.</p>
                 
                 <!-- Zde budou jednotlivé projekty, prozatím prázdné -->
-                <div class="portfolio-grid">
+                <!--<div class="portfolio-grid">
                     <div class="portfolio-item coming-soon">
                         <div class="portfolio-content">
                             <h3>Projekt 1</h3>
@@ -259,7 +454,7 @@
                             <p>Detaily projektu budou brzy přidány.</p>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </section>
 
@@ -267,37 +462,132 @@
         <section id="contact" class="section">
             <div class="container">
                 <h2>Kontakt</h2>
-                
+                <p class="section-description">Máte zájem o spolupráci nebo dotaz? Neváhejte mě kontaktovat.</p>
+
                 <div class="contact-container">
                     <div class="contact-info">
-                        <p>Máte zájem o spolupráci nebo dotaz? Neváhejte mě kontaktovat.</p>
-                        
                         <div class="contact-methods">
+
+                            <!-- Mail -->
                             <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:email@terezanehezova.cz">email@terezanehezova.cz</a>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:email@terezanehezova.cz">email@terezanehezova.cz</a>
+                                </div>
                             </div>
                             
+                            <!-- LinkedIn -->
                             <div class="contact-item">
-                                <i class="fab fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank">LinkedIn</a>
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/tereza-nehezova/" target="_blank">Tereza Sedlářová Nehézová</a>
+                                </div>
                             </div>
+                            
+                            <!-- Github -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/nehy06" target="_blank">nehy06</a>
+                                </div>
+                            </div>
+                            <!-- Ještě nevím, jestli si tu orcid a researchgate nechat... -->
+
+                            <!-- ORCID -->
+                             <!--<div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-orcid"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>ORCID</h4>
+                                    <a href="https://orcid.org/0000-0002-7695-6194" target="_blank">Tereza Sedlářová Nehézová</a>
+                                </div>
+                            </div>-->
+
+                            <!-- ResearchGate -->
+                            <!--<div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-researchgate"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>ResearchGate</h4>
+                                    <a href="https://www.researchgate.net/profile/Tereza-Sedlarova-Nehezova" target="_blank">Tereza Sedlářová Nehézová</a>
+                                </div>
+                            </div>-->
+
                         </div>
                     </div>
                     
                     <div class="contact-form">
-                        <p>Pro vložení kontaktního formuláře použijte ve WordPress plugin.</p>
-                        <!-- Zde bude kontaktní formulář ve WordPress -->
+                        <h3>Napište mi</h3>
+                        <p>Použijte formulář níže nebo mě kontaktujte přímo.</p>
+                        
+                        <!-- Místo pro Contact Form 7 shortcode -->
+                        <div class="cf7-form">
+                            [contact-form-7 id="1234" title="Kontaktní formulář"]
+                        </div>
+                        
+                        <!-- Placeholder pro vývoj -->
+                        <div class="form-placeholder">
+                            <p><strong>Zde bude Contact Form 7 formulář</strong></p>
+                            <p>Ve WordPressu vložte shortcode formuláře místo tohoto textu.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-     </main>
 
-        <?php get_footer(); ?>
+    </main>
 
-     <!-- JavaScript -->
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    &copy; <span id="current-year">2025</span> Tereza Nehézová
+                </div>
+                
+                <!-- Relevantní Social Ikonky do patičky -->
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/tereza-nehezova/">
+                        <li aria-label="LinkedIn" i class="fab fa-linkedin"></li>
+                    </a>
+                    <a href="https://github.com/nehy06">
+                        <li aria-label="GitHub" i class="fab fa-github"></li>
+                    </a>
+                    <a href="https://orcid.org/0000-0002-7695-6194">
+                        <li aria-label="ORCID" i class="fab fa-orcid"></li>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Tereza-Sedlarova-Nehezova">
+                        <li aria-label="researchgate" i class="fab fa-researchgate"></li>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!--<div class="footer-navigation">
+                <div class="back-to-home">
+                    <a href="#"><i class="fas fa-home"></i> Zpět nahoru</a>
+                </div>
+            </div>-->
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <!-- JavaScript pro modal -->
+    <script src="js/modal.js"></script>
+
 </body>
 </html>

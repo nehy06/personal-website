@@ -28,7 +28,7 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     color: var(--primary-color);
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .container {
@@ -288,73 +288,230 @@ img {
 
 /* Hero banner */
 /*---------------------------------------*/
-.hero-banner{
+
+/* Hero banner - nový design */
+/*---------------------------------------*/
+.hero-section {
+    position: relative;
+    min-height: 85vh;
     display: flex;
     align-items: center;
-    padding: 4rem 2rem;
-    max-width: 1200px;
+    justify-content: center;
+    padding: 2rem 0;
+    overflow: hidden;
+    /* Zajistíme, že sekce má správnou výšku a není absolutní */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 999 !important;
+    opacity: 0.8;
+}
+
+.hero-content-center {
+    text-align: center;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-content{
-    flex: 1;
-    max-width: 600;
+.hero-name {
+    font-family: var(--font-mono);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    color: var(--light-color);
+    letter-spacing: -0.02em;
 }
 
-.hero-text{
+.hero-tagline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.hero-intro {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #4a5568;
+    color: var(--light-color);
+    margin: 0;
+}
+
+.hero-description {
     margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-.hero-image{
-    max-width: 350px;
-    flex: 1;
-    text-align: center;
-}
-
-.hero-btn{
-    cursor: pointer;
-    display: inline-flex;
+    font-family: var(--font-mono);
     font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+.hero-section .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.hero-section .social-links a {
+    color: var(--light-color);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.hero-section .social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
     font-weight: 600;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333; /* Subtle border */
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
     height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
 }
 
-.hero-btn:hover{
-    transform: translateY(-5px);
-    font: #c80c0f;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+.hero-btn:hover::before {
+    left: 100%;
 }
 
-.hero-btn .icon{
-    margin-left: 0.5rem;
+.hero-btn.primary {
+    background: var(--light-color);
+    color:black;
+    border-color: var(--light-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Responzivní banner */
+.hero-btn.primary:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.hero-btn.secondary:hover {
+    background: var(--secondary-color);
+    color: white;
+    border: var(--secondary-color) solid;
+    transform: translateY(-3px);
+}
+
+/* Responzivní design pro hero */
+@media (max-width: 992px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+    
+    .hero-intro {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .hero-banner {
-      flex-direction: column;
-      padding: 3rem 1.5rem;
+    .hero-section {
+        min-height: 80vh;
     }
     
-    .hero-content {
-      padding-right: 0;
-      margin-bottom: 2rem;
+    .hero-name {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
     
-    .hero-heading {
-      font-size: 2.5rem;
+    .hero-tagline {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
-  }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+    
+    .hero-content-center {
+        padding: 1rem;
+    }
+}
 
 /* "Section" styly */
 /*---------------------------------------*/
@@ -386,40 +543,6 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     max-width: 800px;
     margin: 0 auto 3rem auto;
     text-align: center;
-}
-
-/* Sekce O mně */
-/*---------------------------------------*/
-#about .about-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-#about .about-image img {
-    /*border-radius: 5%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);*/
-    max-height: 300px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333; /* Subtle border */
-}
-
-#about .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-#about .social-links a {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-#about .social-links a:hover {
-    color: var(--secondary-color);
 }
 
 /* Sekce Služby */
@@ -454,17 +577,18 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     padding: 2rem;
     border-radius: 20px;
     background: #ffffff;
-    box-shadow: 20px 20px 40px #d9d9d9,
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.2),
                 -20px -20px 40px #ffffff;
     transition: transform 0.3s ease;
 }
 
+
 .neo-card:hover{
-    transform: translateY(5px);
+    transform: translateY(-5px);
     border-radius: 20px;
-    background: linear-gradient(145deg, #f4f4f4, #ffffff);
-    box-shadow:  10px 10px 10px #d9d9d9,
-                -10px -10px 20px #ffffff;
+    /*background: linear-gradient(145deg, #f4f4f4, #ffffff);*/
+    /*box-shadow:  10px 10px 10px #d9d9d9,
+                -10px -10px 20px #ffffff;*/
 }
 
 /* Styl pro ikonky v service kartách*/
@@ -497,20 +621,190 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     opacity: 0.85;
 }
 
-/* Responzivní design about */
+/* Service kartičky vol 2*/
+/*---------------------------------------*/
+/* Nové služby - redesign */
+/*---------------------------------------*/
+.services-new-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-new-card {
+    position: relative;
+    padding: 2.5rem 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-new-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), #ff6b6b);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-new-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-new-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+}
+
+/* Číslo kartičky */
+.service-new-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #9ca3af;
+    opacity: 0.6;
+}
+
+/* Ikona */
+.service-new-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(200, 12, 15, 0.08);
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-new-card:hover .service-new-icon {
+    background: rgba(200, 12, 15, 0.15);
+    transform: scale(1.05);
+}
+
+.service-new-icon i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+/* Nadpis */
+.service-new-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+}
+
+/* Text */
+.service-new-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: auto;
+    flex-grow: 1;
+}
+
+/* Link na spodku */
+.service-new-link {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.service-new-link span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-mono);
+}
+
+.service-new-card:hover .service-new-link span {
+    transform: translateX(5px);
+    color: #dc2626;
+}
+
+/* Responzivní design */
 @media (max-width: 992px) {
-    #about .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    #about .social-links {
-        justify-content: center;
+    .services-new-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
-  /* CV */
-  /*---------------------------------------*/
+@media (max-width: 768px) {
+    .services-new-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-new-card {
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+    
+    .service-new-number {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Alternativní varianta - tmavé kartičky */
+/*---------------------------------------*/
+.service-new-card.dark {
+    background: var(--primary-color);
+    border-color: #374151;
+    color: #ffffff;
+}
+
+.service-new-card.dark h3 {
+    color: #ffffff;
+}
+
+.service-new-card.dark p {
+    color: #d1d5db;
+}
+
+.service-new-card.dark .service-new-number {
+    color: #9ca3af;
+}
+
+.service-new-card.dark .service-new-icon {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.service-new-card.dark:hover .service-new-icon {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.service-new-card.dark .service-new-link {
+    border-top-color: #4b5563;
+}
+
+.service-new-card.dark:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+/* CV */
+/*---------------------------------------*/
 .cv-content{
     max-width: 1000px;
     margin: 0 auto;
@@ -590,6 +884,27 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     color: #666;
 }
 
+.cv-btn {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border: var(--primary-color) solid 1px;
+    border-radius: 30px;
+    gap: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cv-btn:hover{
+    background:var(--secondary-color);
+    color: white;
+    border: var(--secondary-color);
+    transform: translate(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    color: white;
+}
+
 /* Responzinví CV */
 @media (max-width: 768px) {
     .cv-grid {
@@ -621,6 +936,154 @@ kdybych to chtela zrusit, tak pod tim mam pripraveno stridani pozadi kazdou druh
     text-align: center;
 }
 
-  /* Footer */
-  /*---------------------------------------*/
+
+/* Kontaktní formulář */
+/*---------------------------------------*/
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-mono);
+    color: var(--primary-color);
+}
+
+.contact-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.2),
+                -20px -20px 40px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+/*.contact-item:hover {
+    transform: translateY(-5px);
+    border-radius: 20px;
+
+}*/
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-details h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.contact-details a {
+    color: #666;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--secondary-color);
+}
+
+/* Formulář */
+.contact-form {
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.2),
+                -20px -20px 40px #ffffff;
+    height: fit-content;
+}
+
+.contact-form p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Placeholder pro formulář během vývoje */
+.form-placeholder {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #ddd;
+    text-align: center;
+    color: #666;
+}
+
+.form-placeholder p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responzivní design pro kontakt */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        gap: 2rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+    
+/* Footer */
+/*---------------------------------------*/
+#footer {
+    background: #f4f4f4;
+    font-size: 1.2rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-social:hover{
+    color: var(--secondary-color);
+}
+
+
+
 
